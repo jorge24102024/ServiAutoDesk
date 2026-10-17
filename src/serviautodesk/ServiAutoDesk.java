@@ -8,6 +8,7 @@ public class ServiAutoDesk {
         System.out.println("Primer programa en JAVA");
         System.out.println("Mi Actualizando Git Hub: ");
         System.out.println("HOla somos el grupo 8");
+        System.out.println("Hola soy Hugo Estoy probando la sincronizacion con el github");
     }
     
 }
