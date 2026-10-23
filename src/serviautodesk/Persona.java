@@ -19,7 +19,10 @@ public abstract class Persona {
     }
 
     public void setCedula(String cedula) {
-        this.cedula = cedula;
+        if (cedula!=null{
+            this.cedula = cedula;
+    
+        }
     }
 
     public String getNombre() {
