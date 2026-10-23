@@ -8,6 +8,7 @@ package serviautodesk;
  *
  * @author hugo_
  */
+//clase vehiculo
 public class Vehiculo {
     
 }
