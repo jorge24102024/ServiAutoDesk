@@ -19,7 +19,8 @@ public abstract class Persona {
     }
 
     public void setCedula(String cedula) {
-        if (cedula!=null{
+        if (cedula!=null){
+            
             this.cedula = cedula;
     
         }
