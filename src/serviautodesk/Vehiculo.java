@@ -30,7 +30,7 @@ public abstract class Vehiculo {
     }
 
     public int getAnio() {
-        return anio;
+        return anio;    
     }
 
     public Cliente getPropietario() {
@@ -50,11 +50,15 @@ public abstract class Vehiculo {
     }
 
     public void setAnio(int anio) {
-        this.anio = anio;
+        if (anio >= 2027 && 1990<= anio ){
+            
+            this.anio = anio;
+        }
     }
 
     public void setPropietario(Cliente propietario) {
         this.propietario = propietario;
+        
     }
     
     
