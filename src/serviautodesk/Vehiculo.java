@@ -1,20 +1,22 @@
-
 package serviautodesk;
-
 
 public abstract class Vehiculo {
     private String placa;
     private String marca;
     private String modelo;
     private int anio;
-    protected Cliente propietario;
+    private int km;
+    private Cliente propietario;
+    private boolean enTaller; // true mientras tenga una orden activa
 
-    public Vehiculo(String placa, String marca, String modelo, int anio, Cliente propietario) {
-        this.placa = placa;
+    public Vehiculo(String placa, String marca, String modelo, int anio, int km, Cliente propietario) {
+        this.placa = placa.toUpperCase();
         this.marca = marca;
         this.modelo = modelo;
         this.anio = anio;
+        this.km = km;
         this.propietario = propietario;
+        this.enTaller = false;
     }
 
     public String getPlaca() {
@@ -30,69 +32,50 @@ public abstract class Vehiculo {
     }
 
     public int getAnio() {
-        return anio;    
+        return anio;
+    }
+
+    public void setAnio(int anio) {
+        if (anio >= 1990 && anio <= 2027) {
+            this.anio = anio;
+        }
+    }
+
+    public int getKm() {
+        return km;
+    }
+
+    public void setKm(int km) {
+        if (km >= 0) {
+            this.km = km;
+        }
     }
 
     public Cliente getPropietario() {
         return propietario;
     }
 
-    public void setPlaca(String placa) {
-        this.placa = placa;
+    public boolean isEnTaller() {
+        return enTaller;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void setEnTaller(boolean enTaller) {
+        this.enTaller = enTaller;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public void setAnio(int anio) {
-        if (anio >= 2027 && 1990<= anio ){
-            
-            this.anio = anio;
-        }
-    }
-
-    public void setPropietario(Cliente propietario) {
-        this.propietario = propietario;
-        
-    }
-    
-    
-    
-    
-    
-    /*
-     No conocemos estos metodos pero los pongo ya que estaba con duda el hacer esta clase y que metodos nesecitaria
-    */
+    // Dos vehiculos son iguales si tienen la misma placa
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-        return true;
+        if (obj instanceof Vehiculo) {
+            Vehiculo otro = (Vehiculo) obj;
+            return this.placa.equals(otro.placa);
         }
-        
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
-      
-        Vehiculo otroVehiculo = (Vehiculo) obj;
-    
-    
-        return this.placa.equals(otroVehiculo.placa);
-
+        return false;
     }
+
     @Override
     public String toString() {
-        return "Vehículo {" + "placa=" + placa +", marca=" + marca + ", modelo=" + modelo + ", año=" + anio +'}';
-            
-            
-            
-             
+        return "Placa: " + placa + " | " + marca + " " + modelo + " | Anio: " + anio
+                + " | Km: " + km + " | Dueno: " + propietario.getNombre();
     }
-          
-              
-    
 }
