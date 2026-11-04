@@ -8,7 +8,8 @@ public class Taller {
     private ArrayList<OrdenReparacion> ordenes = new ArrayList<>();
 
     public boolean registrarCliente(Cliente cliente) {
-        if (clientes.contains(cliente)) return false;
+        if (clientes.contains(cliente)) 
+            return false;
         clientes.add(cliente);
         return true;
     }
