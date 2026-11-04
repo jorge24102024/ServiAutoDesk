@@ -20,13 +20,20 @@ public class ServiAutoDesk {
             opcion = leerEntero("Opcion: ", 1, 7);
             
             switch (opcion) {
-                case 1: registrarVehiculo(); break;
-                case 2: crearOrden(); break;
-                case 3: agregarServicio(); break;
-                case 4: avanzarEstadoOrden(); break;
-                case 5: pagarYEntregar(); break;
-                case 6: menuReportes(); break;
-                case 7: System.out.println("Hasta luego."); break;
+                case 1: registrarVehiculo(); 
+                break;
+                case 2: crearOrden(); 
+                break;
+                case 3: agregarServicio(); 
+                break;
+                case 4: avanzarEstadoOrden(); 
+                break;
+                case 5: pagarYEntregar(); 
+                break;
+                case 6: menuReportes(); 
+                break;
+                case 7: System.out.println("Hasta luego."); 
+                break;
             }
         } while (opcion != 7);
     }
@@ -129,7 +136,11 @@ public class ServiAutoDesk {
     static void pagarYEntregar() {
         int id = leerEntero("ID de la orden a procesar pago/entrega: ", 1, 100000);
         OrdenReparacion o = taller.buscarOrden(id);
-        if (o == null) { System.out.println("Orden no encontrada."); return; }
+        if (o == null) { 
+            System.out.println("Orden no encontrada."); 
+            return; 
+        
+        }
 
         if (!o.isPagada()) {
             if (o.pagar()) {
@@ -186,4 +197,4 @@ public class ServiAutoDesk {
         } while (texto.isEmpty());
         return texto;
     }
-}
+} 
