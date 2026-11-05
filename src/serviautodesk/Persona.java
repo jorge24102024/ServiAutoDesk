@@ -6,46 +6,37 @@ public abstract class Persona {
     private String telefono;
 
     public Persona(String cedula, String nombre, String telefono) {
-        this.cedula = cedula;
-        this.nombre = nombre;
-        this.telefono = telefono;
+        setCedula(cedula);
+        setNombre(nombre);
+        setTelefono(telefono);
     }
 
     public String getCedula() {
         return cedula;
     }
-
+    //VALIDACION DE CEDULA
     public void setCedula(String cedula) {
-        this.cedula = cedula;
+        if(cedula!= null && cedula.matches("[0-9]{10}")) {
+            this.cedula = cedula;
+        } else {
+            System.out.println("Error: La cedula debe tener 10 digitos.");
+        }
     }
 
     public String getNombre() {
         return nombre;
     }
-
+    //VALIDACION NOMBRE
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+         this.nombre = nombre;
     }
 
     public String getTelefono() {
         return telefono;
     }
-
+    //VALIDACION TELEFONO
     public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    // Dos personas son iguales si tienen la misma cedula
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
-        Persona otra = (Persona) obj;
-        return this.cedula.equals(otra.cedula);
+           this.telefono=telefono;
     }
 
     @Override
