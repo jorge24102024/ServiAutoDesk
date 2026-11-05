@@ -6,7 +6,7 @@
 El proyecto está diseñado bajo los principios de la POO , aplicando herencia, polimorfismo, encapsulamiento y el uso de interfaces para garantizar un código limpio, escalable y mantenible.
 
 
-##  Equipo de Desarrollo / Colaboración
+##  Equipo de Desarrollo / Colaboraciónc
 Este proyecto fue desarrollado de forma colaborativa mediante control de versiones en Git y GitHub:
 * **Jorge Bruce Galarza Espin** (`jorggala@espol.edu.ec`) — Desarrollo Backend y Estructura de Clases
 * **Juan Manuel Carrasco Galarza** (`juancarr@espol.edu.ec`) — Gestión de Clientes y Órdenes
