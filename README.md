@@ -5,7 +5,6 @@
 
 El proyecto está diseñado bajo los principios de la POO , aplicando herencia, polimorfismo, encapsulamiento y el uso de interfaces para garantizar un código limpio, escalable y mantenible.
 
----
 
 ##  Equipo de Desarrollo / Colaboración
 Este proyecto fue desarrollado de forma colaborativa mediante control de versiones en Git y GitHub:
@@ -13,7 +12,6 @@ Este proyecto fue desarrollado de forma colaborativa mediante control de version
 * **Juan Manuel Carrasco Galarza** (`juancarr@espol.edu.ec`) — Gestión de Clientes y Órdenes
 * **Hugo Sebastián Ruiz villa** (`hugoruiz@espol.edu.ec`) — Servicios, Facturación y Reportes
 
----
 
 ## Tecnologías y Herramientas Utilizadas
 * **Lenguaje:** Java
@@ -21,7 +19,6 @@ Este proyecto fue desarrollado de forma colaborativa mediante control de version
 * **Control de Versiones:** GitHub 
 
 
----
 
 ## Instrucciones de Ejecución
 1. Clona este repositorio o descárgalo en tu computadora:
