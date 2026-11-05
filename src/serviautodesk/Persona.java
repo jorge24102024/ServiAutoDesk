@@ -15,12 +15,8 @@ public abstract class Persona {
         return cedula;
     }
     //VALIDACION DE CEDULA
-    public void setCedula(String cedula) {
-        if(cedula!= null && cedula.matches("[0-9]{10}")) {
-            this.cedula = cedula;
-        } else {
-            System.out.println("Error: La cedula debe tener 10 digitos.");
-        }
+    public void setCedula(String cedula){
+        this.cedula = cedula;
     }
 
     public String getNombre() {
